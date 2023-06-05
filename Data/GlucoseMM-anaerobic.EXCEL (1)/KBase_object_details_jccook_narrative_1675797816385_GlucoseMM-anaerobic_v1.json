@@ -1,0 +1,73 @@
+{
+    "metadata": [
+        [
+            3,
+            "GlucoseMM-anaerobic",
+            "KBaseBiochem.Media-4.2",
+            "2023-02-07T19:30:31+0000",
+            1,
+            "jccook",
+            137230,
+            "jccook:narrative_1675797816385",
+            "c76db869b92b73be6e3fe102a75ad723",
+            2070,
+            {
+                "Is Defined": "0",
+                "Is Minimal": "0",
+                "Name": "Carbon-D-Glucose",
+                "Number compounds": "19",
+                "Source ID": "Carbon-D-Glucose"
+            }
+        ]
+    ],
+    "provenance": [
+        {
+            "copied": "117387/51/1",
+            "copy_source_inaccessible": 0,
+            "created": "2021-07-07T12:42:31+0000",
+            "creator": "janakakbase",
+            "epoch": 1625661751738,
+            "extracted_ids": {},
+            "info": [
+                3,
+                "GlucoseMM-anaerobic",
+                "KBaseBiochem.Media-4.2",
+                "2023-02-07T19:30:31+0000",
+                1,
+                "jccook",
+                137230,
+                "jccook:narrative_1675797816385",
+                "c76db869b92b73be6e3fe102a75ad723",
+                2070,
+                {
+                    "Is Defined": "0",
+                    "Is Minimal": "0",
+                    "Name": "Carbon-D-Glucose",
+                    "Number compounds": "19",
+                    "Source ID": "Carbon-D-Glucose"
+                }
+            ],
+            "orig_wsid": 28277,
+            "path": [
+                "137230/3/1"
+            ],
+            "provenance": [
+                {
+                    "custom": {},
+                    "external_data": [],
+                    "input_ws_objects": [],
+                    "intermediate_incoming": [],
+                    "intermediate_outgoing": [],
+                    "method_params": [],
+                    "resolved_ws_objects": [],
+                    "script": "ws-load",
+                    "script_command_line": "ws-load  KBaseBiochem.Media GlucoseMM-anaerobic /Users/janakaanl/Downloads/GlucoseMM-anaerobic -w 28277",
+                    "service": "Workspace",
+                    "service_ver": "0.11.4",
+                    "subactions": []
+                }
+            ],
+            "refs": []
+        }
+    ]
+}

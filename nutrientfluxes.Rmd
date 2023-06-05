@@ -1,0 +1,109 @@
+---
+title: "Randomization of glucose medium"
+author: "julia"
+date: "2023-03-07"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+getwd()
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+
+DataFolderPath<-"Data/Carbon-D-Glucose.EXCEL"
+
+```
+```{r}
+carbon_d_glucose <- read.csv(paste0(DataFolderPath,"/kb|media.5189.csv"))
+# works
+carbon_d_glucose
+data <- carbon_d_glucose
+```
+
+```{r}
+#carbon_d_glucose<-read.csv("kb|media.5189.csv")
+data <- carbon_d_glcose
+```
+
+```{r}
+input <- "glucose"
+numberofsimulations <- 1000
+for (i in 1:numberofsimulations) {
+  print(paste0(input,"_simulation_",i))
+  
+  
+  # replace min flux with random number between 0 and -100
+  data[, 4] <- runif(nrow(data), min=-100, max=0)
+   data[, 4] <- round(data[, 4])
+  # replace max flux with random number between 0 and 100
+  data[, 5] <- runif(nrow(data), min=0, max=100)
+  data[, 5] <- round(data[, 5])
+  # write the randomized dataframe as csv file
+  write.csv(data, file=paste0("Output/",input,"_simulation_",i,".csv"),row.names = F)
+}
+
+
+#
+```
+```{r}
+install.packages("ggplot2")
+library(ggplot2)
+
+# set the folder path to where the CSV files are located
+folder_path <- "Output"
+
+# get all CSV files in the folder
+file_names <- list.files(folder_path, pattern = "*.csv", full.names = TRUE)
+
+# initialize an empty data frame to store all data
+df <- data.frame()
+
+# loop through each CSV file and combine into a single data frame
+for (file in file_names) {
+  # read the CSV file
+  temp_df <- read.csv(file, stringsAsFactors = FALSE)
+  
+  # combine the data into a single data frame
+  df <- rbind(df, temp_df)
+}
+
+# convert name column to a factor
+df$name <- as.factor(df$name)
+
+# create histograms for each factor of the name column
+for (compound in unique(df$name)) {
+  # create histograms for min_flux
+  ggplot(df[df$name == compound, ], aes(x = as.numeric(min_flux))) +
+    geom_histogram() +
+    ggtitle(paste0(compound, " - Min Flux"))
+  
+  # create histograms for max_flux
+  ggplot(df[df$name == compound, ], aes(x = as.numeric(max_flux))) +
+    geom_histogram() +
+    ggtitle(paste0(compound, " - Max Flux"))
+}
+
+
+```
+
+
+
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

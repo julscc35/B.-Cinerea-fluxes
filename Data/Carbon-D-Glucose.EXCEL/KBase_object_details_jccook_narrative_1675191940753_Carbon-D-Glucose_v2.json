@@ -1,0 +1,144 @@
+{
+    "metadata": [
+        [
+            2,
+            "Carbon-D-Glucose",
+            "KBaseBiochem.Media-4.0",
+            "2023-01-31T19:07:01+0000",
+            2,
+            "jccook",
+            136677,
+            "jccook:narrative_1675191940753",
+            "3dfd7fb34954d2bdf6ec6078a067b9d8",
+            2169,
+            {
+                "Is Defined": "0",
+                "Is Minimal": "0",
+                "Name": "Carbon-D-Glucose",
+                "Number compounds": "20",
+                "Source ID": "Carbon-D-Glucose"
+            }
+        ]
+    ],
+    "provenance": [
+        {
+            "copied": "118718/10/2",
+            "copy_source_inaccessible": 0,
+            "created": "2015-03-04T07:10:23+0000",
+            "creator": "chenry",
+            "epoch": 1425453023226,
+            "extracted_ids": {},
+            "info": [
+                2,
+                "Carbon-D-Glucose",
+                "KBaseBiochem.Media-4.0",
+                "2023-01-31T19:07:01+0000",
+                2,
+                "jccook",
+                136677,
+                "jccook:narrative_1675191940753",
+                "3dfd7fb34954d2bdf6ec6078a067b9d8",
+                2169,
+                {
+                    "Is Defined": "0",
+                    "Is Minimal": "0",
+                    "Name": "Carbon-D-Glucose",
+                    "Number compounds": "20",
+                    "Source ID": "Carbon-D-Glucose"
+                }
+            ],
+            "path": [
+                "136677/2/2"
+            ],
+            "provenance": [
+                {
+                    "custom": {},
+                    "epoch": 1425453022000,
+                    "external_data": [],
+                    "input_ws_objects": [],
+                    "intermediate_incoming": [],
+                    "intermediate_outgoing": [],
+                    "method": "addmedia",
+                    "method_params": [
+                        {
+                            "concentrations": [
+                                "0.001",
+                                "0.001",
+                                "0.001",
+                                "0.001",
+                                "0.001",
+                                "0.001",
+                                "0.001",
+                                "0.001",
+                                "0.001",
+                                "0.001",
+                                "0.001",
+                                "0.001",
+                                "0.001",
+                                "0.001",
+                                "0.001",
+                                "0.001",
+                                "0.001",
+                                "0.001",
+                                "0.001",
+                                "0.001"
+                            ],
+                            "maxflux": [
+                                "100",
+                                "100",
+                                "100",
+                                "100",
+                                "100",
+                                "100",
+                                "100",
+                                "100",
+                                "100",
+                                "100",
+                                "100",
+                                "10",
+                                "100",
+                                "100",
+                                "100",
+                                "100",
+                                "100",
+                                "100",
+                                "100",
+                                "5"
+                            ],
+                            "media": "Carbon-D-Glucose",
+                            "minflux": [
+                                "-100",
+                                "-100",
+                                "-100",
+                                "-100",
+                                "-100",
+                                "-100",
+                                "-100",
+                                "-100",
+                                "-100",
+                                "-100",
+                                "-100",
+                                "-100",
+                                "-100",
+                                "-100",
+                                "-100",
+                                "-100",
+                                "-100",
+                                "-100",
+                                "-100",
+                                "-100"
+                            ],
+                            "workspace": "chenry:1424237704727"
+                        }
+                    ],
+                    "resolved_ws_objects": [],
+                    "service": "KBaseFBAModeling",
+                    "service_ver": "0.1.0",
+                    "subactions": [],
+                    "time": "2015-03-04T07:10:22+0000"
+                }
+            ],
+            "refs": []
+        }
+    ]
+}
